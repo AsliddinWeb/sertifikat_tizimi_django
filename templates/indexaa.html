@@ -1,0 +1,180 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css"
+        integrity="sha512-KXol4x3sVoO+8ZsWPFI/r5KBVB/ssCGB5tsv2nVOKwLg33wTFP3fmnXa47FdSVIshVTgsYk/1734xSk9aFIa4A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static './css/style.css' %}">
+    <title>Sertificate Website</title>
+</head>
+
+<body>
+
+
+    <div class="ui large top fixed hidden menu">
+        <div class="ui container">
+            <a href="#home" class="active item">Bosh shaifa</a>
+            <a href="#aboutMe" class="item">Biz haqimizda</a>
+            <a href="#certificate" class="item">Sertifikat</a>
+            
+        </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <div class="ui vertical inverted sidebar menu">
+        <a href="#home" class="active item">Bosh shaifa</a>
+        <a href="#aboutMe" class="item">Biz haqimizda</a>
+        <a href="#certificate" class="item">Sertifikat</a>
+    </div>
+
+
+    <!-- Page Contents -->
+    <div class="pusher" id="home">
+        <div class="ui inverted vertical masthead center aligned segment headClass">
+
+            <div class="ui container">
+                <div class="ui large secondary inverted pointing menu menyu">
+                    <a class="toc item">
+                        <i class="sidebar icon"></i>
+                    </a>
+                    <a href="#home" class="active item">Bosh shaifa</a>
+                    <a href="#aboutMe" class="item">Biz haqimizda</a>
+                    <a href="#certificate" class="item">Sertifikat</a>
+                </div>
+            </div>
+
+            <div class="ui text container uic">
+                <h1 class="ui inverted logos">
+                    <img src="{% static './img/logoo.png' %}" alt="">
+                </h1>
+                <h2>Muhammad al-Xorazmiy noomidagi Toshkent Axborot Texnologilari Universiteti Qarshi filali</h2>
+                <h1 class="ui inverted header welcome">
+                    Hush kelibsiz
+                </h1>
+                <!-- <h2>Do whatever you want when you want to.</h2> -->
+                <a href="#certificate" class="ui huge  button cert inverted">Sertifikatni tekshirish <i
+                        class="right arrow icon"></i></a>
+            </div>
+
+        </div>
+
+        <div id="aboutMe" class="ui vertical stripe segment">
+            <div class="ui middle aligned stackable grid container">
+                <div class="row">
+                    <div class="eight wide column">
+                        <h3 class="ui header">We Help Companies and Companions</h3>
+                        <p>We can give your company superpowers to do things that they never thought possible. Let us
+                            delight your customers and empower your needs...through pure data analytics.</p>
+                        <h3 class="ui header">We Make Bananas That Can Dance</h3>
+                        <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be
+                            bioengineered.</p>
+                    </div>
+                    <div class="six wide right floated column">
+                        <img src="{% static './img/formImg.jpg' %}" class="ui large bordered rounded image">
+                    </div>
+                </div>
+                <!-- <div class="row">
+                    <div class="center aligned column">
+                        <a class="ui huge button">Check Them Out</a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+
+        <div class="ui vertical stripe quote segment">
+            <div class="ui equal width stackable internally celled grid">
+                <div class="center aligned row">
+                    <div class="column what-left">
+                        <h3>"What a Company"</h3>
+                        <p>That is what they all say about us</p>
+                    </div>
+                    <div class="column what-right">
+                        <h3>"I shouldn't have gone with their competitor."</h3>
+                        <p>
+                            <img src="{% static './img/formImg.jpg' %}" class="ui avatar image"> <b>Nan</b> Chief Fun
+                            Officer Acme Toys
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="certificate" class="ui vertical stripe segment">
+            <div class="ui text container">
+                <h3 class="ui header">Sertifikat tekshirish</h3>
+
+                <form class="ui form" method="post">
+                    {% csrf_token %}
+                    <div class="two fields">
+                        <div class="required field item sixteen wide column">
+                            <!-- <label>Seriya raqamingiz</label> -->
+                            <div class="ui icon input ">
+                                <input name="nomer" type="number" placeholder="Seriya raqamingizni kiriting...">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="ui hidden divider"></div>
+                    <div class="ui error message">
+                        <div class="header">We noticed some issues</div>
+                    </div>
+                    <button class="ui submit button" type="submit">Tekshirish</button>
+                </form>
+
+                <h4 class="ui horizontal header divider">
+                    <a href="#">Case Studies</a>
+                </h4>
+                
+            </div>
+        </div>
+
+
+        <div class="ui inverted vertical footer segment">
+            <div class="ui container">
+                <div class="ui stackable inverted divided equal height stackable grid">
+                    <div class="three wide column">
+                        <h4 class="ui inverted header">Asosiy</h4>
+                        <div class="ui inverted link list">
+                            <a href="#" class="item">Bosh sahifa</a>
+                            <a href="#" class="item">Biz haqimizda</a>
+                            <a href="#" class="item">Sertifikat olish</a>
+                        </div>
+                    </div>
+                    <div class="three wide column">
+                        <h4 class="ui inverted header">Biz haqimizda</h4>
+                        <div class="ui inverted link list">
+                            <a href="https://asliddinweb.uz" target="_blank" class="item">Asliddin - Backend developer</a>
+                            <a href="https://t.me/vokhid_abdurakhmanov" target="_blank" class="item">Vohid - Frontend developer</a>
+                            <a href="https://my-portfolio-akbarov.netlify.app" class="item">G'anisher - Frontend developer </a>
+                        </div>
+                    </div>
+                    <div class="seven wide column">
+                        <h4 class="ui inverted header">Sertifikat</h4>
+                        <p>"Elektron hukumat" o'quv markazining sertifikat berish platformasi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"
+        integrity="sha512-Xo0Jh8MsOn72LGV8kU5LsclG7SUzJsWGhXbWcYs2MAmChkQzwiW/yTQwdJ8w6UA9C6EVG18GHb/TrYpYCjyAQw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/sidebar.min.js"
+        integrity="sha512-Zvh9ucGg/12KrDb43+7EghbChsYCRQUKgH0RW1TE0Ey5LQdcCfAd835YV7Jlvj5R5lbITRiAAO4jf1bh91UWaw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
